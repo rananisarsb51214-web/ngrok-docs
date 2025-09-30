@@ -1,22 +1,18 @@
----
-title: Vaults
----
 
-import VaultsCreateRequest from "/snippets/api/resources/examples/_vaults_create_request.mdx";
-import VaultsCreateResponse from "/snippets/api/resources/examples/_vaults_create_response.mdx";
-import VaultsUpdateRequest from "/snippets/api/resources/examples/_vaults_update_request.mdx";
-import VaultsUpdateResponse from "/snippets/api/resources/examples/_vaults_update_response.mdx";
-import VaultsDeleteRequest from "/snippets/api/resources/examples/_vaults_delete_request.mdx";
-import VaultsDeleteResponse from "/snippets/api/resources/examples/_vaults_delete_response.mdx";
-import VaultsGetRequest from "/snippets/api/resources/examples/_vaults_get_request.mdx";
-import VaultsGetResponse from "/snippets/api/resources/examples/_vaults_get_response.mdx";
-import VaultsGetSecretsByVaultRequest from "/snippets/api/resources/examples/_vaults_get_secrets_by_vault_request.mdx";
-import VaultsGetSecretsByVaultResponse from "/snippets/api/resources/examples/_vaults_get_secrets_by_vault_response.mdx";
-import VaultsListRequest from "/snippets/api/resources/examples/_vaults_list_request.mdx";
-import VaultsListResponse from "/snippets/api/resources/examples/_vaults_list_response.mdx";
+import VaultsCreateRequest from '/snippets/api/resources/examples/_vaults_create_request.mdx';
+import VaultsCreateResponse from '/snippets/api/resources/examples/_vaults_create_response.mdx';
+import VaultsUpdateRequest from '/snippets/api/resources/examples/_vaults_update_request.mdx';
+import VaultsUpdateResponse from '/snippets/api/resources/examples/_vaults_update_response.mdx';
+import VaultsDeleteRequest from '/snippets/api/resources/examples/_vaults_delete_request.mdx';
+import VaultsDeleteResponse from '/snippets/api/resources/examples/_vaults_delete_response.mdx';
+import VaultsGetRequest from '/snippets/api/resources/examples/_vaults_get_request.mdx';
+import VaultsGetResponse from '/snippets/api/resources/examples/_vaults_get_response.mdx';
+import VaultsGetSecretsByVaultRequest from '/snippets/api/resources/examples/_vaults_get_secrets_by_vault_request.mdx';
+import VaultsGetSecretsByVaultResponse from '/snippets/api/resources/examples/_vaults_get_secrets_by_vault_response.mdx';
+import VaultsListRequest from '/snippets/api/resources/examples/_vaults_list_request.mdx';
+import VaultsListResponse from '/snippets/api/resources/examples/_vaults_list_response.mdx';
 
-
-
+# Vaults
 
 ## Create Vault
 
@@ -30,11 +26,11 @@ POST /vaults
 
 #### Parameters
 
-| Name          | Type   | Description                                    |
-| ------------- | ------ | ---------------------------------------------- |
-| `name`        | string | Name of vault                                  |
-| `metadata`    | string | Arbitrary user-defined metadata for this Vault |
-| `description` | string | description of Vault                           |
+| Name | Type | Description |
+|---|---|---|
+| `name` | string | Name of vault |
+| `metadata` | string | Arbitrary user-defined metadata for this Vault |
+| `description` | string | description of Vault |
 
 ### Response
 
@@ -44,17 +40,18 @@ Returns a 201 response on success
 
 #### Fields
 
-| Name              | Type   | Description                                                 |
-| ----------------- | ------ | ----------------------------------------------------------- |
-| `id`              | string | identifier for Vault                                        |
-| `uri`             | string | URI of this Vault API resource                              |
-| `created_at`      | string | Timestamp when the Vault was created (RFC 3339 format)      |
-| `updated_at`      | string | Timestamp when the Vault was last updated (RFC 3339 format) |
-| `name`            | string | Name of vault                                               |
-| `description`     | string | description of Vault                                        |
-| `metadata`        | string | Arbitrary user-defined metadata for this Vault              |
-| `created_by`      | string | Reference to who created this Vault                         |
-| `last_updated_by` | string | Reference to who created this Vault                         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | identifier for Vault |
+| `uri` | string | URI of this Vault API resource |
+| `created_at` | string | Timestamp when the Vault was created (RFC 3339 format) |
+| `updated_at` | string | Timestamp when the Vault was last updated (RFC 3339 format) |
+| `name` | string | Name of vault |
+| `description` | string | description of Vault |
+| `metadata` | string | Arbitrary user-defined metadata for this Vault |
+| `created_by` | string | Reference to who created this Vault |
+| `last_updated_by` | string | Reference to who created this Vault |
+
 
 ## Update Vault
 
@@ -68,12 +65,12 @@ PATCH /vaults/\{id\}
 
 #### Parameters
 
-| Name          | Type   | Description                                    |
-| ------------- | ------ | ---------------------------------------------- |
-| `id`          | string | identifier for Vault                           |
-| `name`        | string | Name of vault                                  |
-| `metadata`    | string | Arbitrary user-defined metadata for this Vault |
-| `description` | string | description of Vault                           |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | identifier for Vault |
+| `name` | string | Name of vault |
+| `metadata` | string | Arbitrary user-defined metadata for this Vault |
+| `description` | string | description of Vault |
 
 ### Response
 
@@ -83,17 +80,18 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name              | Type   | Description                                                 |
-| ----------------- | ------ | ----------------------------------------------------------- |
-| `id`              | string | identifier for Vault                                        |
-| `uri`             | string | URI of this Vault API resource                              |
-| `created_at`      | string | Timestamp when the Vault was created (RFC 3339 format)      |
-| `updated_at`      | string | Timestamp when the Vault was last updated (RFC 3339 format) |
-| `name`            | string | Name of vault                                               |
-| `description`     | string | description of Vault                                        |
-| `metadata`        | string | Arbitrary user-defined metadata for this Vault              |
-| `created_by`      | string | Reference to who created this Vault                         |
-| `last_updated_by` | string | Reference to who created this Vault                         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | identifier for Vault |
+| `uri` | string | URI of this Vault API resource |
+| `created_at` | string | Timestamp when the Vault was created (RFC 3339 format) |
+| `updated_at` | string | Timestamp when the Vault was last updated (RFC 3339 format) |
+| `name` | string | Name of vault |
+| `description` | string | description of Vault |
+| `metadata` | string | Arbitrary user-defined metadata for this Vault |
+| `created_by` | string | Reference to who created this Vault |
+| `last_updated_by` | string | Reference to who created this Vault |
+
 
 ## Delete Vault
 
@@ -127,17 +125,18 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name              | Type   | Description                                                 |
-| ----------------- | ------ | ----------------------------------------------------------- |
-| `id`              | string | identifier for Vault                                        |
-| `uri`             | string | URI of this Vault API resource                              |
-| `created_at`      | string | Timestamp when the Vault was created (RFC 3339 format)      |
-| `updated_at`      | string | Timestamp when the Vault was last updated (RFC 3339 format) |
-| `name`            | string | Name of vault                                               |
-| `description`     | string | description of Vault                                        |
-| `metadata`        | string | Arbitrary user-defined metadata for this Vault              |
-| `created_by`      | string | Reference to who created this Vault                         |
-| `last_updated_by` | string | Reference to who created this Vault                         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | identifier for Vault |
+| `uri` | string | URI of this Vault API resource |
+| `created_at` | string | Timestamp when the Vault was created (RFC 3339 format) |
+| `updated_at` | string | Timestamp when the Vault was last updated (RFC 3339 format) |
+| `name` | string | Name of vault |
+| `description` | string | description of Vault |
+| `metadata` | string | Arbitrary user-defined metadata for this Vault |
+| `created_by` | string | Reference to who created this Vault |
+| `last_updated_by` | string | Reference to who created this Vault |
+
 
 ## GetSecretsByVault Vault
 
@@ -157,32 +156,31 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name            | Type                     | Description                                                       |
-| --------------- | ------------------------ | ----------------------------------------------------------------- |
-| `secrets`       | [Secret](#secret-fields) | The list of Secrets for this account                              |
-| `uri`           | string                   |                                                                   |
-| `next_page_uri` | string                   | URI of the next page of results, or null if there is no next page |
+| Name | Type | Description |
+|---|---|---|
+| `secrets` | [Secret](#secret-fields) | The list of Secrets for this account |
+| `uri` | string |  |
+| `next_page_uri` | string | URI of the next page of results, or null if there is no next page |
 
 #### Secret fields
 
-| Name              | Type               | Description                                                  |
-| ----------------- | ------------------ | ------------------------------------------------------------ |
-| `id`              | string             | identifier for Secret                                        |
-| `uri`             | string             | URI of this Secret API resource                              |
-| `created_at`      | string             | Timestamp when the Secret was created (RFC 3339 format)      |
-| `updated_at`      | string             | Timestamp when the Secret was last updated (RFC 3339 format) |
-| `name`            | string             | Name of secret                                               |
-| `description`     | string             | description of Secret                                        |
-| `metadata`        | string             | Arbitrary user-defined metadata for this Secret              |
-| `created_by`      | [Ref](#ref-fields) | Reference to who created this Secret                         |
-| `last_updated_by` | [Ref](#ref-fields) | Reference to who created this Secret                         |
-| `vault`           | [Ref](#ref-fields) | Reference to the vault the secret is stored in               |
-
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | identifier for Secret |
+| `uri` | string | URI of this Secret API resource |
+| `created_at` | string | Timestamp when the Secret was created (RFC 3339 format) |
+| `updated_at` | string | Timestamp when the Secret was last updated (RFC 3339 format) |
+| `name` | string | Name of secret |
+| `description` | string | description of Secret |
+| `metadata` | string | Arbitrary user-defined metadata for this Secret |
+| `created_by` | [Ref](#ref-fields) | Reference to who created this Secret |
+| `last_updated_by` | [Ref](#ref-fields) | Reference to who created this Secret |
+| `vault` | [Ref](#ref-fields) | Reference to the vault the secret is stored in |
 #### Ref fields
 
-| Name  | Type   | Description                   |
-| ----- | ------ | ----------------------------- |
-| `id`  | string | a resource identifier         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | a resource identifier |
 | `uri` | string | a uri for locating a resource |
 
 ## List Vaults
@@ -203,22 +201,22 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name            | Type                   | Description                                                       |
-| --------------- | ---------------------- | ----------------------------------------------------------------- |
-| `vaults`        | [Vault](#vault-fields) | The list of Vaults for this account                               |
-| `uri`           | string                 |                                                                   |
-| `next_page_uri` | string                 | URI of the next page of results, or null if there is no next page |
+| Name | Type | Description |
+|---|---|---|
+| `vaults` | [Vault](#vault-fields) | The list of Vaults for this account |
+| `uri` | string |  |
+| `next_page_uri` | string | URI of the next page of results, or null if there is no next page |
 
 #### Vault fields
 
-| Name              | Type   | Description                                                 |
-| ----------------- | ------ | ----------------------------------------------------------- |
-| `id`              | string | identifier for Vault                                        |
-| `uri`             | string | URI of this Vault API resource                              |
-| `created_at`      | string | Timestamp when the Vault was created (RFC 3339 format)      |
-| `updated_at`      | string | Timestamp when the Vault was last updated (RFC 3339 format) |
-| `name`            | string | Name of vault                                               |
-| `description`     | string | description of Vault                                        |
-| `metadata`        | string | Arbitrary user-defined metadata for this Vault              |
-| `created_by`      | string | Reference to who created this Vault                         |
-| `last_updated_by` | string | Reference to who created this Vault                         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | identifier for Vault |
+| `uri` | string | URI of this Vault API resource |
+| `created_at` | string | Timestamp when the Vault was created (RFC 3339 format) |
+| `updated_at` | string | Timestamp when the Vault was last updated (RFC 3339 format) |
+| `name` | string | Name of vault |
+| `description` | string | description of Vault |
+| `metadata` | string | Arbitrary user-defined metadata for this Vault |
+| `created_by` | string | Reference to who created this Vault |
+| `last_updated_by` | string | Reference to who created this Vault |

@@ -1,20 +1,16 @@
----
-title: IP Policy Rules
----
 
-import IPPolicyRulesCreateRequest from "/snippets/api/resources/examples/_ip_policy_rules_create_request.mdx";
-import IPPolicyRulesCreateResponse from "/snippets/api/resources/examples/_ip_policy_rules_create_response.mdx";
-import IPPolicyRulesDeleteRequest from "/snippets/api/resources/examples/_ip_policy_rules_delete_request.mdx";
-import IPPolicyRulesDeleteResponse from "/snippets/api/resources/examples/_ip_policy_rules_delete_response.mdx";
-import IPPolicyRulesGetRequest from "/snippets/api/resources/examples/_ip_policy_rules_get_request.mdx";
-import IPPolicyRulesGetResponse from "/snippets/api/resources/examples/_ip_policy_rules_get_response.mdx";
-import IPPolicyRulesListRequest from "/snippets/api/resources/examples/_ip_policy_rules_list_request.mdx";
-import IPPolicyRulesListResponse from "/snippets/api/resources/examples/_ip_policy_rules_list_response.mdx";
-import IPPolicyRulesUpdateRequest from "/snippets/api/resources/examples/_ip_policy_rules_update_request.mdx";
-import IPPolicyRulesUpdateResponse from "/snippets/api/resources/examples/_ip_policy_rules_update_response.mdx";
+import IPPolicyRulesCreateRequest from '/snippets/api/resources/examples/_ip_policy_rules_create_request.mdx';
+import IPPolicyRulesCreateResponse from '/snippets/api/resources/examples/_ip_policy_rules_create_response.mdx';
+import IPPolicyRulesDeleteRequest from '/snippets/api/resources/examples/_ip_policy_rules_delete_request.mdx';
+import IPPolicyRulesDeleteResponse from '/snippets/api/resources/examples/_ip_policy_rules_delete_response.mdx';
+import IPPolicyRulesGetRequest from '/snippets/api/resources/examples/_ip_policy_rules_get_request.mdx';
+import IPPolicyRulesGetResponse from '/snippets/api/resources/examples/_ip_policy_rules_get_response.mdx';
+import IPPolicyRulesListRequest from '/snippets/api/resources/examples/_ip_policy_rules_list_request.mdx';
+import IPPolicyRulesListResponse from '/snippets/api/resources/examples/_ip_policy_rules_list_response.mdx';
+import IPPolicyRulesUpdateRequest from '/snippets/api/resources/examples/_ip_policy_rules_update_request.mdx';
+import IPPolicyRulesUpdateResponse from '/snippets/api/resources/examples/_ip_policy_rules_update_response.mdx';
 
-
-
+# IP Policy Rules
 
 ## Create IP Policy Rule
 
@@ -28,13 +24,13 @@ POST /ip_policy_rules
 
 #### Parameters
 
-| Name           | Type   | Description                                                                                    |
-| -------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| `description`  | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes.         |
-| `metadata`     | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
-| `cidr`         | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported.                |
-| `ip_policy_id` | string | ID of the IP policy this IP policy rule will be attached to                                    |
-| `action`       | string | the action to apply to the policy rule, either `allow` or `deny`                               |
+| Name | Type | Description |
+|---|---|---|
+| `description` | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
+| `cidr` | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported. |
+| `ip_policy_id` | string | ID of the IP policy this IP policy rule will be attached to |
+| `action` | string | the action to apply to the policy rule, either `allow` or `deny` |
 
 ### Response
 
@@ -44,22 +40,22 @@ Returns a 201 response on success
 
 #### Fields
 
-| Name          | Type               | Description                                                                                    |
-| ------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
-| `id`          | string             | unique identifier for this IP policy rule                                                      |
-| `uri`         | string             | URI of the IP policy rule API resource                                                         |
-| `created_at`  | string             | timestamp when the IP policy rule was created, RFC 3339 format                                 |
-| `description` | string             | human-readable description of the source IPs of this IP rule. optional, max 255 bytes.         |
-| `metadata`    | string             | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
-| `cidr`        | string             | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported.                |
-| `ip_policy`   | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to                                 |
-| `action`      | string             | the action to apply to the policy rule, either `allow` or `deny`                               |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy rule |
+| `uri` | string | URI of the IP policy rule API resource |
+| `created_at` | string | timestamp when the IP policy rule was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
+| `cidr` | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported. |
+| `ip_policy` | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to |
+| `action` | string | the action to apply to the policy rule, either `allow` or `deny` |
 
 #### Ref fields
 
-| Name  | Type   | Description                   |
-| ----- | ------ | ----------------------------- |
-| `id`  | string | a resource identifier         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | a resource identifier |
 | `uri` | string | a uri for locating a resource |
 
 ## Delete IP Policy Rule
@@ -94,22 +90,22 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type               | Description                                                                                    |
-| ------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
-| `id`          | string             | unique identifier for this IP policy rule                                                      |
-| `uri`         | string             | URI of the IP policy rule API resource                                                         |
-| `created_at`  | string             | timestamp when the IP policy rule was created, RFC 3339 format                                 |
-| `description` | string             | human-readable description of the source IPs of this IP rule. optional, max 255 bytes.         |
-| `metadata`    | string             | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
-| `cidr`        | string             | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported.                |
-| `ip_policy`   | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to                                 |
-| `action`      | string             | the action to apply to the policy rule, either `allow` or `deny`                               |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy rule |
+| `uri` | string | URI of the IP policy rule API resource |
+| `created_at` | string | timestamp when the IP policy rule was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
+| `cidr` | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported. |
+| `ip_policy` | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to |
+| `action` | string | the action to apply to the policy rule, either `allow` or `deny` |
 
 #### Ref fields
 
-| Name  | Type   | Description                   |
-| ----- | ------ | ----------------------------- |
-| `id`  | string | a resource identifier         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | a resource identifier |
 | `uri` | string | a uri for locating a resource |
 
 ## List IP Policy Rules
@@ -130,30 +126,29 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name              | Type                                 | Description                                            |
-| ----------------- | ------------------------------------ | ------------------------------------------------------ |
-| `ip_policy_rules` | [IPPolicyRule](#ippolicyrule-fields) | the list of all IP policy rules on this account        |
-| `uri`             | string                               | URI of the IP policy rule list API resource            |
-| `next_page_uri`   | string                               | URI of the next page, or null if there is no next page |
+| Name | Type | Description |
+|---|---|---|
+| `ip_policy_rules` | [IPPolicyRule](#ippolicyrule-fields) | the list of all IP policy rules on this account |
+| `uri` | string | URI of the IP policy rule list API resource |
+| `next_page_uri` | string | URI of the next page, or null if there is no next page |
 
 #### IPPolicyRule fields
 
-| Name          | Type               | Description                                                                                    |
-| ------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
-| `id`          | string             | unique identifier for this IP policy rule                                                      |
-| `uri`         | string             | URI of the IP policy rule API resource                                                         |
-| `created_at`  | string             | timestamp when the IP policy rule was created, RFC 3339 format                                 |
-| `description` | string             | human-readable description of the source IPs of this IP rule. optional, max 255 bytes.         |
-| `metadata`    | string             | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
-| `cidr`        | string             | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported.                |
-| `ip_policy`   | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to                                 |
-| `action`      | string             | the action to apply to the policy rule, either `allow` or `deny`                               |
-
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy rule |
+| `uri` | string | URI of the IP policy rule API resource |
+| `created_at` | string | timestamp when the IP policy rule was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
+| `cidr` | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported. |
+| `ip_policy` | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to |
+| `action` | string | the action to apply to the policy rule, either `allow` or `deny` |
 #### Ref fields
 
-| Name  | Type   | Description                   |
-| ----- | ------ | ----------------------------- |
-| `id`  | string | a resource identifier         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | a resource identifier |
 | `uri` | string | a uri for locating a resource |
 
 ## Update IP Policy Rule
@@ -168,12 +163,12 @@ PATCH /ip_policy_rules/\{id\}
 
 #### Parameters
 
-| Name          | Type   | Description                                                                                    |
-| ------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| `id`          | string |                                                                                                |
-| `description` | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes.         |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
-| `cidr`        | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported.                |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string |  |
+| `description` | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
+| `cidr` | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported. |
 
 ### Response
 
@@ -183,20 +178,20 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type               | Description                                                                                    |
-| ------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
-| `id`          | string             | unique identifier for this IP policy rule                                                      |
-| `uri`         | string             | URI of the IP policy rule API resource                                                         |
-| `created_at`  | string             | timestamp when the IP policy rule was created, RFC 3339 format                                 |
-| `description` | string             | human-readable description of the source IPs of this IP rule. optional, max 255 bytes.         |
-| `metadata`    | string             | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
-| `cidr`        | string             | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported.                |
-| `ip_policy`   | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to                                 |
-| `action`      | string             | the action to apply to the policy rule, either `allow` or `deny`                               |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy rule |
+| `uri` | string | URI of the IP policy rule API resource |
+| `created_at` | string | timestamp when the IP policy rule was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP rule. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy rule. optional, max 4096 bytes. |
+| `cidr` | string | an IP or IP range specified in CIDR notation. IPv4 and IPv6 are both supported. |
+| `ip_policy` | [Ref](#ref-fields) | object describing the IP policy this IP Policy Rule belongs to |
+| `action` | string | the action to apply to the policy rule, either `allow` or `deny` |
 
 #### Ref fields
 
-| Name  | Type   | Description                   |
-| ----- | ------ | ----------------------------- |
-| `id`  | string | a resource identifier         |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | a resource identifier |
 | `uri` | string | a uri for locating a resource |

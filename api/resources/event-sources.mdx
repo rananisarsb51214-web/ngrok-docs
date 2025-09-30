@@ -1,20 +1,16 @@
----
-title: Event Sources
----
 
-import EventSourcesCreateRequest from "/snippets/api/resources/examples/_event_sources_create_request.mdx";
-import EventSourcesCreateResponse from "/snippets/api/resources/examples/_event_sources_create_response.mdx";
-import EventSourcesDeleteRequest from "/snippets/api/resources/examples/_event_sources_delete_request.mdx";
-import EventSourcesDeleteResponse from "/snippets/api/resources/examples/_event_sources_delete_response.mdx";
-import EventSourcesGetRequest from "/snippets/api/resources/examples/_event_sources_get_request.mdx";
-import EventSourcesGetResponse from "/snippets/api/resources/examples/_event_sources_get_response.mdx";
-import EventSourcesListRequest from "/snippets/api/resources/examples/_event_sources_list_request.mdx";
-import EventSourcesListResponse from "/snippets/api/resources/examples/_event_sources_list_response.mdx";
-import EventSourcesUpdateRequest from "/snippets/api/resources/examples/_event_sources_update_request.mdx";
-import EventSourcesUpdateResponse from "/snippets/api/resources/examples/_event_sources_update_response.mdx";
+import EventSourcesCreateRequest from '/snippets/api/resources/examples/_event_sources_create_request.mdx';
+import EventSourcesCreateResponse from '/snippets/api/resources/examples/_event_sources_create_response.mdx';
+import EventSourcesDeleteRequest from '/snippets/api/resources/examples/_event_sources_delete_request.mdx';
+import EventSourcesDeleteResponse from '/snippets/api/resources/examples/_event_sources_delete_response.mdx';
+import EventSourcesGetRequest from '/snippets/api/resources/examples/_event_sources_get_request.mdx';
+import EventSourcesGetResponse from '/snippets/api/resources/examples/_event_sources_get_response.mdx';
+import EventSourcesListRequest from '/snippets/api/resources/examples/_event_sources_list_request.mdx';
+import EventSourcesListResponse from '/snippets/api/resources/examples/_event_sources_list_response.mdx';
+import EventSourcesUpdateRequest from '/snippets/api/resources/examples/_event_sources_update_request.mdx';
+import EventSourcesUpdateResponse from '/snippets/api/resources/examples/_event_sources_update_response.mdx';
 
-
-
+# Event Sources
 
 ## Create Event Source
 
@@ -28,10 +24,10 @@ POST /event_subscriptions/\{subscription_id\}/sources
 
 #### Parameters
 
-| Name              | Type   | Description                                                                             |
-| ----------------- | ------ | --------------------------------------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `subscription_id` | string | The unique identifier for the Event Subscription that this Event Source is attached to. |
-| `type`            | string | Type of event for which an event subscription will trigger                              |
+| `type` | string | Type of event for which an event subscription will trigger |
 
 ### Response
 
@@ -41,10 +37,11 @@ Returns a 201 response on success
 
 #### Fields
 
-| Name   | Type   | Description                                                |
-| ------ | ------ | ---------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `type` | string | Type of event for which an event subscription will trigger |
-| `uri`  | string | URI of the Event Source API resource.                      |
+| `uri` | string | URI of the Event Source API resource. |
+
 
 ## Delete Event Source
 
@@ -78,10 +75,11 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name   | Type   | Description                                                |
-| ------ | ------ | ---------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `type` | string | Type of event for which an event subscription will trigger |
-| `uri`  | string | URI of the Event Source API resource.                      |
+| `uri` | string | URI of the Event Source API resource. |
+
 
 ## List Event Sources
 
@@ -101,17 +99,17 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name      | Type                               | Description                                             |
-| --------- | ---------------------------------- | ------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `sources` | [EventSource](#eventsource-fields) | The list of all Event Sources for an Event Subscription |
-| `uri`     | string                             | URI of the next page, or null if there is no next page. |
+| `uri` | string | URI of the next page, or null if there is no next page. |
 
 #### EventSource fields
 
-| Name   | Type   | Description                                                |
-| ------ | ------ | ---------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `type` | string | Type of event for which an event subscription will trigger |
-| `uri`  | string | URI of the Event Source API resource.                      |
+| `uri` | string | URI of the Event Source API resource. |
 
 ## Update Event Source
 
@@ -125,10 +123,10 @@ PATCH /event_subscriptions/\{subscription_id\}/sources/\{type\}
 
 #### Parameters
 
-| Name              | Type   | Description                                                                             |
-| ----------------- | ------ | --------------------------------------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `subscription_id` | string | The unique identifier for the Event Subscription that this Event Source is attached to. |
-| `type`            | string | Type of event for which an event subscription will trigger                              |
+| `type` | string | Type of event for which an event subscription will trigger |
 
 ### Response
 
@@ -138,7 +136,8 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name   | Type   | Description                                                |
-| ------ | ------ | ---------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `type` | string | Type of event for which an event subscription will trigger |
-| `uri`  | string | URI of the Event Source API resource.                      |
+| `uri` | string | URI of the Event Source API resource. |
+

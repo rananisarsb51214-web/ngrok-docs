@@ -1,20 +1,16 @@
----
-title: IP Policies
----
 
-import IPPoliciesCreateRequest from "/snippets/api/resources/examples/_ip_policies_create_request.mdx";
-import IPPoliciesCreateResponse from "/snippets/api/resources/examples/_ip_policies_create_response.mdx";
-import IPPoliciesDeleteRequest from "/snippets/api/resources/examples/_ip_policies_delete_request.mdx";
-import IPPoliciesDeleteResponse from "/snippets/api/resources/examples/_ip_policies_delete_response.mdx";
-import IPPoliciesGetRequest from "/snippets/api/resources/examples/_ip_policies_get_request.mdx";
-import IPPoliciesGetResponse from "/snippets/api/resources/examples/_ip_policies_get_response.mdx";
-import IPPoliciesListRequest from "/snippets/api/resources/examples/_ip_policies_list_request.mdx";
-import IPPoliciesListResponse from "/snippets/api/resources/examples/_ip_policies_list_response.mdx";
-import IPPoliciesUpdateRequest from "/snippets/api/resources/examples/_ip_policies_update_request.mdx";
-import IPPoliciesUpdateResponse from "/snippets/api/resources/examples/_ip_policies_update_response.mdx";
+import IPPoliciesCreateRequest from '/snippets/api/resources/examples/_ip_policies_create_request.mdx';
+import IPPoliciesCreateResponse from '/snippets/api/resources/examples/_ip_policies_create_response.mdx';
+import IPPoliciesDeleteRequest from '/snippets/api/resources/examples/_ip_policies_delete_request.mdx';
+import IPPoliciesDeleteResponse from '/snippets/api/resources/examples/_ip_policies_delete_response.mdx';
+import IPPoliciesGetRequest from '/snippets/api/resources/examples/_ip_policies_get_request.mdx';
+import IPPoliciesGetResponse from '/snippets/api/resources/examples/_ip_policies_get_response.mdx';
+import IPPoliciesListRequest from '/snippets/api/resources/examples/_ip_policies_list_request.mdx';
+import IPPoliciesListResponse from '/snippets/api/resources/examples/_ip_policies_list_response.mdx';
+import IPPoliciesUpdateRequest from '/snippets/api/resources/examples/_ip_policies_update_request.mdx';
+import IPPoliciesUpdateResponse from '/snippets/api/resources/examples/_ip_policies_update_response.mdx';
 
-
-
+# IP Policies
 
 ## Create IP Policy
 
@@ -28,10 +24,10 @@ POST /ip_policies
 
 #### Parameters
 
-| Name          | Type   | Description                                                                               |
-| ------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes.  |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+| Name | Type | Description |
+|---|---|---|
+| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
 
 ### Response
 
@@ -41,13 +37,14 @@ Returns a 201 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                               |
-| ------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `id`          | string | unique identifier for this IP policy                                                      |
-| `uri`         | string | URI of the IP Policy API resource                                                         |
-| `created_at`  | string | timestamp when the IP policy was created, RFC 3339 format                                 |
-| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes.  |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy |
+| `uri` | string | URI of the IP Policy API resource |
+| `created_at` | string | timestamp when the IP policy was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+
 
 ## Delete IP Policy
 
@@ -81,13 +78,14 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                               |
-| ------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `id`          | string | unique identifier for this IP policy                                                      |
-| `uri`         | string | URI of the IP Policy API resource                                                         |
-| `created_at`  | string | timestamp when the IP policy was created, RFC 3339 format                                 |
-| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes.  |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy |
+| `uri` | string | URI of the IP Policy API resource |
+| `created_at` | string | timestamp when the IP policy was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+
 
 ## List IP Policies
 
@@ -107,21 +105,21 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name            | Type                         | Description                                            |
-| --------------- | ---------------------------- | ------------------------------------------------------ |
-| `ip_policies`   | [IPPolicy](#ippolicy-fields) | the list of all IP policies on this account            |
-| `uri`           | string                       | URI of the IP policy list API resource                 |
-| `next_page_uri` | string                       | URI of the next page, or null if there is no next page |
+| Name | Type | Description |
+|---|---|---|
+| `ip_policies` | [IPPolicy](#ippolicy-fields) | the list of all IP policies on this account |
+| `uri` | string | URI of the IP policy list API resource |
+| `next_page_uri` | string | URI of the next page, or null if there is no next page |
 
 #### IPPolicy fields
 
-| Name          | Type   | Description                                                                               |
-| ------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `id`          | string | unique identifier for this IP policy                                                      |
-| `uri`         | string | URI of the IP Policy API resource                                                         |
-| `created_at`  | string | timestamp when the IP policy was created, RFC 3339 format                                 |
-| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes.  |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy |
+| `uri` | string | URI of the IP Policy API resource |
+| `created_at` | string | timestamp when the IP policy was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
 
 ## Update IP Policy
 
@@ -135,11 +133,11 @@ PATCH /ip_policies/\{id\}
 
 #### Parameters
 
-| Name          | Type   | Description                                                                               |
-| ------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `id`          | string |                                                                                           |
-| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes.  |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string |  |
+| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
 
 ### Response
 
@@ -149,10 +147,11 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                               |
-| ------------- | ------ | ----------------------------------------------------------------------------------------- |
-| `id`          | string | unique identifier for this IP policy                                                      |
-| `uri`         | string | URI of the IP Policy API resource                                                         |
-| `created_at`  | string | timestamp when the IP policy was created, RFC 3339 format                                 |
-| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes.  |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique identifier for this IP policy |
+| `uri` | string | URI of the IP Policy API resource |
+| `created_at` | string | timestamp when the IP policy was created, RFC 3339 format |
+| `description` | string | human-readable description of the source IPs of this IP policy. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined machine-readable data of this IP policy. optional, max 4096 bytes. |
+

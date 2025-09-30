@@ -1,20 +1,16 @@
----
-title: API Keys
----
 
-import APIKeysCreateRequest from "/snippets/api/resources/examples/_api_keys_create_request.mdx";
-import APIKeysCreateResponse from "/snippets/api/resources/examples/_api_keys_create_response.mdx";
-import APIKeysDeleteRequest from "/snippets/api/resources/examples/_api_keys_delete_request.mdx";
-import APIKeysDeleteResponse from "/snippets/api/resources/examples/_api_keys_delete_response.mdx";
-import APIKeysGetRequest from "/snippets/api/resources/examples/_api_keys_get_request.mdx";
-import APIKeysGetResponse from "/snippets/api/resources/examples/_api_keys_get_response.mdx";
-import APIKeysListRequest from "/snippets/api/resources/examples/_api_keys_list_request.mdx";
-import APIKeysListResponse from "/snippets/api/resources/examples/_api_keys_list_response.mdx";
-import APIKeysUpdateRequest from "/snippets/api/resources/examples/_api_keys_update_request.mdx";
-import APIKeysUpdateResponse from "/snippets/api/resources/examples/_api_keys_update_response.mdx";
+import APIKeysCreateRequest from '/snippets/api/resources/examples/_api_keys_create_request.mdx';
+import APIKeysCreateResponse from '/snippets/api/resources/examples/_api_keys_create_response.mdx';
+import APIKeysDeleteRequest from '/snippets/api/resources/examples/_api_keys_delete_request.mdx';
+import APIKeysDeleteResponse from '/snippets/api/resources/examples/_api_keys_delete_response.mdx';
+import APIKeysGetRequest from '/snippets/api/resources/examples/_api_keys_get_request.mdx';
+import APIKeysGetResponse from '/snippets/api/resources/examples/_api_keys_get_response.mdx';
+import APIKeysListRequest from '/snippets/api/resources/examples/_api_keys_list_request.mdx';
+import APIKeysListResponse from '/snippets/api/resources/examples/_api_keys_list_response.mdx';
+import APIKeysUpdateRequest from '/snippets/api/resources/examples/_api_keys_update_request.mdx';
+import APIKeysUpdateResponse from '/snippets/api/resources/examples/_api_keys_update_response.mdx';
 
-
-
+# API Keys
 
 ## Create API Key
 
@@ -28,11 +24,11 @@ POST /api_keys
 
 #### Parameters
 
-| Name          | Type   | Description                                                                                                                                                                                     |
-| ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes.                                                                                                   |
-| `metadata`    | string | arbitrary user-defined data of this API key. optional, max 4096 bytes                                                                                                                           |
-| `owner_id`    | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot. |
+| Name | Type | Description |
+|---|---|---|
+| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined data of this API key. optional, max 4096 bytes |
+| `owner_id` | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot. |
 
 ### Response
 
@@ -42,15 +38,16 @@ Returns a 201 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                                                                                                                                                         |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique API key resource identifier                                                                                                                                                                                  |
-| `uri`         | string | URI to the API resource of this API key                                                                                                                                                                             |
-| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes.                                                                                                                       |
-| `metadata`    | string | arbitrary user-defined data of this API key. optional, max 4096 bytes                                                                                                                                               |
-| `created_at`  | string | timestamp when the api key was created, RFC 3339 format                                                                                                                                                             |
-| `token`       | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
-| `owner_id`    | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot.                     |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this API key |
+| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined data of this API key. optional, max 4096 bytes |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
+| `token` | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
+| `owner_id` | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot. |
+
 
 ## Delete API Key
 
@@ -84,15 +81,16 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                                                                                                                                                         |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique API key resource identifier                                                                                                                                                                                  |
-| `uri`         | string | URI to the API resource of this API key                                                                                                                                                                             |
-| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes.                                                                                                                       |
-| `metadata`    | string | arbitrary user-defined data of this API key. optional, max 4096 bytes                                                                                                                                               |
-| `created_at`  | string | timestamp when the api key was created, RFC 3339 format                                                                                                                                                             |
-| `token`       | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
-| `owner_id`    | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot.                     |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this API key |
+| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined data of this API key. optional, max 4096 bytes |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
+| `token` | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
+| `owner_id` | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot. |
+
 
 ## List API Keys
 
@@ -112,23 +110,23 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name            | Type                     | Description                                            |
-| --------------- | ------------------------ | ------------------------------------------------------ |
-| `keys`          | [APIKey](#apikey-fields) | the list of API keys for this account                  |
-| `uri`           | string                   | URI of the API keys list API resource                  |
-| `next_page_uri` | string                   | URI of the next page, or null if there is no next page |
+| Name | Type | Description |
+|---|---|---|
+| `keys` | [APIKey](#apikey-fields) | the list of API keys for this account |
+| `uri` | string | URI of the API keys list API resource |
+| `next_page_uri` | string | URI of the next page, or null if there is no next page |
 
 #### APIKey fields
 
-| Name          | Type   | Description                                                                                                                                                                                                         |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique API key resource identifier                                                                                                                                                                                  |
-| `uri`         | string | URI to the API resource of this API key                                                                                                                                                                             |
-| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes.                                                                                                                       |
-| `metadata`    | string | arbitrary user-defined data of this API key. optional, max 4096 bytes                                                                                                                                               |
-| `created_at`  | string | timestamp when the api key was created, RFC 3339 format                                                                                                                                                             |
-| `token`       | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
-| `owner_id`    | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot.                     |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this API key |
+| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined data of this API key. optional, max 4096 bytes |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
+| `token` | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
+| `owner_id` | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot. |
 
 ## Update API Key
 
@@ -142,11 +140,11 @@ PATCH /api_keys/\{id\}
 
 #### Parameters
 
-| Name          | Type   | Description                                                                                   |
-| ------------- | ------ | --------------------------------------------------------------------------------------------- |
-| `id`          | string |                                                                                               |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string |  |
 | `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes. |
-| `metadata`    | string | arbitrary user-defined data of this API key. optional, max 4096 bytes                         |
+| `metadata` | string | arbitrary user-defined data of this API key. optional, max 4096 bytes |
 
 ### Response
 
@@ -156,12 +154,13 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                                                                                                                                                         |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique API key resource identifier                                                                                                                                                                                  |
-| `uri`         | string | URI to the API resource of this API key                                                                                                                                                                             |
-| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes.                                                                                                                       |
-| `metadata`    | string | arbitrary user-defined data of this API key. optional, max 4096 bytes                                                                                                                                               |
-| `created_at`  | string | timestamp when the api key was created, RFC 3339 format                                                                                                                                                             |
-| `token`       | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
-| `owner_id`    | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot.                     |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this API key |
+| `description` | string | human-readable description of what uses the API key to authenticate. optional, max 255 bytes. |
+| `metadata` | string | arbitrary user-defined data of this API key. optional, max 4096 bytes |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
+| `token` | string | the bearer token that can be placed into the Authorization header to authenticate request to the ngrok API. **This value is only available one time, on the API response from key creation. Otherwise it is null.** |
+| `owner_id` | string | If supplied at credential creation, ownership will be assigned to the specified User or Bot. Only admins may specify an owner other than themselves. Defaults to the authenticated User or Bot. |
+

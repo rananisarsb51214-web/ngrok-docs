@@ -1,19 +1,16 @@
----
-title: TLS Edge Traffic Policy Module
-sidebarTitle: Traffic Policy Module
----
 
-import TLSEdgeTrafficPolicyModuleReplaceRequest from "/snippets/api/resources/examples/_tls_edge_traffic_policy_module_replace_request.mdx";
-import TLSEdgeTrafficPolicyModuleReplaceResponse from "/snippets/api/resources/examples/_tls_edge_traffic_policy_module_replace_response.mdx";
-import TLSEdgeTrafficPolicyModuleGetRequest from "/snippets/api/resources/examples/_tls_edge_traffic_policy_module_get_request.mdx";
-import TLSEdgeTrafficPolicyModuleGetResponse from "/snippets/api/resources/examples/_tls_edge_traffic_policy_module_get_response.mdx";
-import TLSEdgeTrafficPolicyModuleDeleteRequest from "/snippets/api/resources/examples/_tls_edge_traffic_policy_module_delete_request.mdx";
-import TLSEdgeTrafficPolicyModuleDeleteResponse from "/snippets/api/resources/examples/_tls_edge_traffic_policy_module_delete_response.mdx";
+import TLSEdgeTrafficPolicyModuleReplaceRequest from '/snippets/api/resources/examples/_tls_edge_traffic_policy_module_replace_request.mdx';
+import TLSEdgeTrafficPolicyModuleReplaceResponse from '/snippets/api/resources/examples/_tls_edge_traffic_policy_module_replace_response.mdx';
+import TLSEdgeTrafficPolicyModuleGetRequest from '/snippets/api/resources/examples/_tls_edge_traffic_policy_module_get_request.mdx';
+import TLSEdgeTrafficPolicyModuleGetResponse from '/snippets/api/resources/examples/_tls_edge_traffic_policy_module_get_response.mdx';
+import TLSEdgeTrafficPolicyModuleDeleteRequest from '/snippets/api/resources/examples/_tls_edge_traffic_policy_module_delete_request.mdx';
+import TLSEdgeTrafficPolicyModuleDeleteResponse from '/snippets/api/resources/examples/_tls_edge_traffic_policy_module_delete_response.mdx';
 
-
-
+# TLS Edge Traffic Policy Module
 
 ## Replace TLS Edge Traffic Policy Module
+
+
 
 ### Request
 
@@ -23,10 +20,10 @@ PUT /edges/tls/\{id\}/traffic_policy
 
 #### Parameters
 
-| Name      | Type    | Description                                                                                        |
-| --------- | ------- | -------------------------------------------------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `enabled` | boolean | `true` if the module will be applied to traffic, `false` to disable. default `true` if unspecified |
-| `value`   | string  | the traffic policy that should be applied to the traffic on your endpoint.                         |
+| `value` | string | the traffic policy that should be applied to the traffic on your endpoint. |
 
 ### Response
 
@@ -36,12 +33,15 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name      | Type    | Description                                                                                        |
-| --------- | ------- | -------------------------------------------------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `enabled` | boolean | `true` if the module will be applied to traffic, `false` to disable. default `true` if unspecified |
-| `value`   | string  | the traffic policy that should be applied to the traffic on your endpoint.                         |
+| `value` | string | the traffic policy that should be applied to the traffic on your endpoint. |
+
 
 ## Get TLS Edge Traffic Policy Module
+
+
 
 ### Request
 
@@ -57,12 +57,15 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name      | Type    | Description                                                                                        |
-| --------- | ------- | -------------------------------------------------------------------------------------------------- |
+| Name | Type | Description |
+|---|---|---|
 | `enabled` | boolean | `true` if the module will be applied to traffic, `false` to disable. default `true` if unspecified |
-| `value`   | string  | the traffic policy that should be applied to the traffic on your endpoint.                         |
+| `value` | string | the traffic policy that should be applied to the traffic on your endpoint. |
+
 
 ## Delete TLS Edge Traffic Policy Module
+
+
 
 ### Request
 

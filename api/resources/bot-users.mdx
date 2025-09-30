@@ -1,20 +1,16 @@
----
-title: Bot Users
----
 
-import BotUsersCreateRequest from "/snippets/api/resources/examples/_bot_users_create_request.mdx";
-import BotUsersCreateResponse from "/snippets/api/resources/examples/_bot_users_create_response.mdx";
-import BotUsersDeleteRequest from "/snippets/api/resources/examples/_bot_users_delete_request.mdx";
-import BotUsersDeleteResponse from "/snippets/api/resources/examples/_bot_users_delete_response.mdx";
-import BotUsersGetRequest from "/snippets/api/resources/examples/_bot_users_get_request.mdx";
-import BotUsersGetResponse from "/snippets/api/resources/examples/_bot_users_get_response.mdx";
-import BotUsersListRequest from "/snippets/api/resources/examples/_bot_users_list_request.mdx";
-import BotUsersListResponse from "/snippets/api/resources/examples/_bot_users_list_response.mdx";
-import BotUsersUpdateRequest from "/snippets/api/resources/examples/_bot_users_update_request.mdx";
-import BotUsersUpdateResponse from "/snippets/api/resources/examples/_bot_users_update_response.mdx";
+import BotUsersCreateRequest from '/snippets/api/resources/examples/_bot_users_create_request.mdx';
+import BotUsersCreateResponse from '/snippets/api/resources/examples/_bot_users_create_response.mdx';
+import BotUsersDeleteRequest from '/snippets/api/resources/examples/_bot_users_delete_request.mdx';
+import BotUsersDeleteResponse from '/snippets/api/resources/examples/_bot_users_delete_response.mdx';
+import BotUsersGetRequest from '/snippets/api/resources/examples/_bot_users_get_request.mdx';
+import BotUsersGetResponse from '/snippets/api/resources/examples/_bot_users_get_response.mdx';
+import BotUsersListRequest from '/snippets/api/resources/examples/_bot_users_list_request.mdx';
+import BotUsersListResponse from '/snippets/api/resources/examples/_bot_users_list_response.mdx';
+import BotUsersUpdateRequest from '/snippets/api/resources/examples/_bot_users_update_request.mdx';
+import BotUsersUpdateResponse from '/snippets/api/resources/examples/_bot_users_update_response.mdx';
 
-
-
+# Bot Users
 
 ## Create Bot User
 
@@ -28,10 +24,10 @@ POST /bot_users
 
 #### Parameters
 
-| Name     | Type    | Description                                  |
-| -------- | ------- | -------------------------------------------- |
-| `name`   | string  | human-readable name used to identify the bot |
-| `active` | boolean | whether or not the bot is active             |
+| Name | Type | Description |
+|---|---|---|
+| `name` | string | human-readable name used to identify the bot |
+| `active` | boolean | whether or not the bot is active |
 
 ### Response
 
@@ -41,13 +37,14 @@ Returns a 201 response on success
 
 #### Fields
 
-| Name         | Type    | Description                                             |
-| ------------ | ------- | ------------------------------------------------------- |
-| `id`         | string  | unique API key resource identifier                      |
-| `uri`        | string  | URI to the API resource of this bot user                |
-| `name`       | string  | human-readable name used to identify the bot            |
-| `active`     | boolean | whether or not the bot is active                        |
-| `created_at` | string  | timestamp when the api key was created, RFC 3339 format |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this bot user |
+| `name` | string | human-readable name used to identify the bot |
+| `active` | boolean | whether or not the bot is active |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
+
 
 ## Delete Bot User
 
@@ -81,13 +78,14 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name         | Type    | Description                                             |
-| ------------ | ------- | ------------------------------------------------------- |
-| `id`         | string  | unique API key resource identifier                      |
-| `uri`        | string  | URI to the API resource of this bot user                |
-| `name`       | string  | human-readable name used to identify the bot            |
-| `active`     | boolean | whether or not the bot is active                        |
-| `created_at` | string  | timestamp when the api key was created, RFC 3339 format |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this bot user |
+| `name` | string | human-readable name used to identify the bot |
+| `active` | boolean | whether or not the bot is active |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
+
 
 ## List Bot Users
 
@@ -107,21 +105,21 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name            | Type                       | Description                                            |
-| --------------- | -------------------------- | ------------------------------------------------------ |
-| `bot_users`     | [BotUser](#botuser-fields) | the list of all bot users on this account              |
-| `uri`           | string                     | URI of the bot users list API resource                 |
-| `next_page_uri` | string                     | URI of the next page, or null if there is no next page |
+| Name | Type | Description |
+|---|---|---|
+| `bot_users` | [BotUser](#botuser-fields) | the list of all bot users on this account |
+| `uri` | string | URI of the bot users list API resource |
+| `next_page_uri` | string | URI of the next page, or null if there is no next page |
 
 #### BotUser fields
 
-| Name         | Type    | Description                                             |
-| ------------ | ------- | ------------------------------------------------------- |
-| `id`         | string  | unique API key resource identifier                      |
-| `uri`        | string  | URI to the API resource of this bot user                |
-| `name`       | string  | human-readable name used to identify the bot            |
-| `active`     | boolean | whether or not the bot is active                        |
-| `created_at` | string  | timestamp when the api key was created, RFC 3339 format |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this bot user |
+| `name` | string | human-readable name used to identify the bot |
+| `active` | boolean | whether or not the bot is active |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
 
 ## Update Bot User
 
@@ -135,11 +133,11 @@ PATCH /bot_users/\{id\}
 
 #### Parameters
 
-| Name     | Type    | Description                                  |
-| -------- | ------- | -------------------------------------------- |
-| `id`     | string  |                                              |
-| `name`   | string  | human-readable name used to identify the bot |
-| `active` | boolean | whether or not the bot is active             |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string |  |
+| `name` | string | human-readable name used to identify the bot |
+| `active` | boolean | whether or not the bot is active |
 
 ### Response
 
@@ -149,10 +147,11 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name         | Type    | Description                                             |
-| ------------ | ------- | ------------------------------------------------------- |
-| `id`         | string  | unique API key resource identifier                      |
-| `uri`        | string  | URI to the API resource of this bot user                |
-| `name`       | string  | human-readable name used to identify the bot            |
-| `active`     | boolean | whether or not the bot is active                        |
-| `created_at` | string  | timestamp when the api key was created, RFC 3339 format |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique API key resource identifier |
+| `uri` | string | URI to the API resource of this bot user |
+| `name` | string | human-readable name used to identify the bot |
+| `active` | boolean | whether or not the bot is active |
+| `created_at` | string | timestamp when the api key was created, RFC 3339 format |
+

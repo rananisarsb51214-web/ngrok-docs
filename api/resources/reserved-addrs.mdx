@@ -1,20 +1,16 @@
----
-title: Reserved Addrs
----
 
-import ReservedAddrsCreateRequest from "/snippets/api/resources/examples/_reserved_addrs_create_request.mdx";
-import ReservedAddrsCreateResponse from "/snippets/api/resources/examples/_reserved_addrs_create_response.mdx";
-import ReservedAddrsDeleteRequest from "/snippets/api/resources/examples/_reserved_addrs_delete_request.mdx";
-import ReservedAddrsDeleteResponse from "/snippets/api/resources/examples/_reserved_addrs_delete_response.mdx";
-import ReservedAddrsGetRequest from "/snippets/api/resources/examples/_reserved_addrs_get_request.mdx";
-import ReservedAddrsGetResponse from "/snippets/api/resources/examples/_reserved_addrs_get_response.mdx";
-import ReservedAddrsListRequest from "/snippets/api/resources/examples/_reserved_addrs_list_request.mdx";
-import ReservedAddrsListResponse from "/snippets/api/resources/examples/_reserved_addrs_list_response.mdx";
-import ReservedAddrsUpdateRequest from "/snippets/api/resources/examples/_reserved_addrs_update_request.mdx";
-import ReservedAddrsUpdateResponse from "/snippets/api/resources/examples/_reserved_addrs_update_response.mdx";
+import ReservedAddrsCreateRequest from '/snippets/api/resources/examples/_reserved_addrs_create_request.mdx';
+import ReservedAddrsCreateResponse from '/snippets/api/resources/examples/_reserved_addrs_create_response.mdx';
+import ReservedAddrsDeleteRequest from '/snippets/api/resources/examples/_reserved_addrs_delete_request.mdx';
+import ReservedAddrsDeleteResponse from '/snippets/api/resources/examples/_reserved_addrs_delete_response.mdx';
+import ReservedAddrsGetRequest from '/snippets/api/resources/examples/_reserved_addrs_get_request.mdx';
+import ReservedAddrsGetResponse from '/snippets/api/resources/examples/_reserved_addrs_get_response.mdx';
+import ReservedAddrsListRequest from '/snippets/api/resources/examples/_reserved_addrs_list_request.mdx';
+import ReservedAddrsListResponse from '/snippets/api/resources/examples/_reserved_addrs_list_response.mdx';
+import ReservedAddrsUpdateRequest from '/snippets/api/resources/examples/_reserved_addrs_update_request.mdx';
+import ReservedAddrsUpdateResponse from '/snippets/api/resources/examples/_reserved_addrs_update_response.mdx';
 
-
-
+# Reserved Addrs
 
 ## Create Reserved Address
 
@@ -28,11 +24,11 @@ POST /reserved_addrs
 
 #### Parameters
 
-| Name          | Type   | Description                                                                                                    |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------- |
-| `description` | string | human-readable description of what this reserved address will be used for                                      |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes.               |
-| `region`      | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+| Name | Type | Description |
+|---|---|---|
+| `description` | string | human-readable description of what this reserved address will be used for |
+| `metadata` | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes. |
+| `region` | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
 
 ### Response
 
@@ -42,15 +38,16 @@ Returns a 201 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                                                    |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique reserved address resource identifier                                                                    |
-| `uri`         | string | URI of the reserved address API resource                                                                       |
-| `created_at`  | string | timestamp when the reserved address was created, RFC 3339 format                                               |
-| `description` | string | human-readable description of what this reserved address will be used for                                      |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes.               |
-| `addr`        | string | hostname:port of the reserved address that was assigned at creation time                                       |
-| `region`      | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique reserved address resource identifier |
+| `uri` | string | URI of the reserved address API resource |
+| `created_at` | string | timestamp when the reserved address was created, RFC 3339 format |
+| `description` | string | human-readable description of what this reserved address will be used for |
+| `metadata` | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes. |
+| `addr` | string | hostname:port of the reserved address that was assigned at creation time |
+| `region` | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+
 
 ## Delete Reserved Address
 
@@ -84,15 +81,16 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                                                    |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique reserved address resource identifier                                                                    |
-| `uri`         | string | URI of the reserved address API resource                                                                       |
-| `created_at`  | string | timestamp when the reserved address was created, RFC 3339 format                                               |
-| `description` | string | human-readable description of what this reserved address will be used for                                      |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes.               |
-| `addr`        | string | hostname:port of the reserved address that was assigned at creation time                                       |
-| `region`      | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique reserved address resource identifier |
+| `uri` | string | URI of the reserved address API resource |
+| `created_at` | string | timestamp when the reserved address was created, RFC 3339 format |
+| `description` | string | human-readable description of what this reserved address will be used for |
+| `metadata` | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes. |
+| `addr` | string | hostname:port of the reserved address that was assigned at creation time |
+| `region` | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+
 
 ## List Reserved Addresses
 
@@ -112,23 +110,23 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name             | Type                                 | Description                                            |
-| ---------------- | ------------------------------------ | ------------------------------------------------------ |
-| `reserved_addrs` | [ReservedAddr](#reservedaddr-fields) | the list of all reserved addresses on this account     |
-| `uri`            | string                               | URI of the reserved address list API resource          |
-| `next_page_uri`  | string                               | URI of the next page, or null if there is no next page |
+| Name | Type | Description |
+|---|---|---|
+| `reserved_addrs` | [ReservedAddr](#reservedaddr-fields) | the list of all reserved addresses on this account |
+| `uri` | string | URI of the reserved address list API resource |
+| `next_page_uri` | string | URI of the next page, or null if there is no next page |
 
 #### ReservedAddr fields
 
-| Name          | Type   | Description                                                                                                    |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique reserved address resource identifier                                                                    |
-| `uri`         | string | URI of the reserved address API resource                                                                       |
-| `created_at`  | string | timestamp when the reserved address was created, RFC 3339 format                                               |
-| `description` | string | human-readable description of what this reserved address will be used for                                      |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes.               |
-| `addr`        | string | hostname:port of the reserved address that was assigned at creation time                                       |
-| `region`      | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique reserved address resource identifier |
+| `uri` | string | URI of the reserved address API resource |
+| `created_at` | string | timestamp when the reserved address was created, RFC 3339 format |
+| `description` | string | human-readable description of what this reserved address will be used for |
+| `metadata` | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes. |
+| `addr` | string | hostname:port of the reserved address that was assigned at creation time |
+| `region` | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
 
 ## Update Reserved Address
 
@@ -142,11 +140,11 @@ PATCH /reserved_addrs/\{id\}
 
 #### Parameters
 
-| Name          | Type   | Description                                                                                      |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------ |
-| `id`          | string |                                                                                                  |
-| `description` | string | human-readable description of what this reserved address will be used for                        |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes. |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string |  |
+| `description` | string | human-readable description of what this reserved address will be used for |
+| `metadata` | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes. |
 
 ### Response
 
@@ -156,12 +154,13 @@ Returns a 200 response on success
 
 #### Fields
 
-| Name          | Type   | Description                                                                                                    |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------- |
-| `id`          | string | unique reserved address resource identifier                                                                    |
-| `uri`         | string | URI of the reserved address API resource                                                                       |
-| `created_at`  | string | timestamp when the reserved address was created, RFC 3339 format                                               |
-| `description` | string | human-readable description of what this reserved address will be used for                                      |
-| `metadata`    | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes.               |
-| `addr`        | string | hostname:port of the reserved address that was assigned at creation time                                       |
-| `region`      | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+| Name | Type | Description |
+|---|---|---|
+| `id` | string | unique reserved address resource identifier |
+| `uri` | string | URI of the reserved address API resource |
+| `created_at` | string | timestamp when the reserved address was created, RFC 3339 format |
+| `description` | string | human-readable description of what this reserved address will be used for |
+| `metadata` | string | arbitrary user-defined machine-readable data of this reserved address. Optional, max 4096 bytes. |
+| `addr` | string | hostname:port of the reserved address that was assigned at creation time |
+| `region` | string | reserve the address in this geographic ngrok datacenter. Optional, default is us. (au, eu, ap, us, jp, in, sa) |
+

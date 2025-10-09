@@ -49,7 +49,7 @@ Using this guide, you will launch a local cluster (or use an existing local/remo
 
    If minikube defaults to using the `docker` runtime, you will likely see an error related to root privileges when installing Linkerd to your cluster. The error includes a workaround to let you install Linkerd despite using the `docker` runtime.
 
-   </Tip>
+</Tip>
 
 1. Use `kubectl` to verify your local cluster is running properly.
 
@@ -105,7 +105,7 @@ Using this guide, you will launch a local cluster (or use an existing local/remo
 
    These steps are based on the [Linkerd documentation](https://linkerd.io/2.14/getting-started/), which we encourage you to explore for additional details on the value of a service mesh, additional Linkerd features, and more.
 
-   </Note>
+</Note>
 
 ## Deploy an example microservices-based application
 
@@ -146,7 +146,7 @@ To demonstrate how Linkerd and the ngrok Kubernetes Operator integrate to add ad
 
    Make sure you edit line `9` of the manifest below, which contains the `NGROK_DOMAIN` variable, with your ngrok subdomain. It should look something like `one-two-three.ngrok.app`.
 
-   </Tip>
+</Tip>
 
    ```yaml showLineNumbers
    apiVersion: networking.k8s.io/v1
@@ -181,7 +181,7 @@ To demonstrate how Linkerd and the ngrok Kubernetes Operator integrate to add ad
 
    If you see an error when applying the manifest, double-check that you've updated the `NGROK_DOMAIN` value and try again.
 
-   </Tip>
+</Tip>
 
 1. Access your Emojivoto application by navigating to the your ngrok domain, e.g. `https://one-two-three.ngrok.app`, in your browser.
 

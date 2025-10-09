@@ -15,7 +15,7 @@ To use the ngrok Kubernetes Operator with Microsoft Entra ID:
 4. [Create an enterprise app in Microsoft Entra ID](#create-an-enterprise-app)
 5. [Finish adding Microsoft Entra ID authorization to your ngrok Edge](#finish-adding-entra-ID-authorization-ngrok-edge)
 6. [Test authorization to your app using Microsoft Entra ID](#test-authorization-using-microsoft-entra-id)
-   </Tip>
+</Tip>
 
 The [ngrok Kubernetes Operator](/k8s) is ngrok's official controller for adding secure public ingress and middleware execution to your Kubernetes apps with ngrok's cloud service. With ngrok, you can manage and secure traffic to your apps at every stage of the development lifecycle while also benefitting from simpler configurations, security, and edge acceleration.
 
@@ -41,7 +41,7 @@ With this guide, you'll (optionally) create a new Kubernetes cluster and example
 1. An [ngrok account](https://ngrok.com/signup) at the [**pay-as-you-go** or **custom**](https://ngrok.com/pricing) tiers.
 2. A Microsoft Azure account with access to an existing Microsoft Entra ID tenant or the ability to create a new tenant with an Microsoft Entra ID P1 or P2 license.
 3. A Kubernetes cluster, either locally or in a public cloud, with an app you'd like to be publicly accessible to specific users.
-   </Warning>
+</Warning>
 
 ## **Step 1**: Create a cluster and deploy an example app
 
@@ -118,7 +118,7 @@ Next, you'll configure and deploy the [ngrok Kubernetes Operator](https://github
 
     If you are adding the ngrok Kubernetes Operator to a different deployment, you will need also change the `metadata.name`, `service.name`, and `service.port.number` values to match your app's configuration. See the [controller docs](https://github.com/ngrok/ngrok-operator/tree/main/docs) for additional details on `spec` settings and common overrides.
 
-    </Tip>
+</Tip>
 
     ```yaml
     apiVersion: networking.k8s.io/v1
@@ -152,7 +152,7 @@ Next, you'll configure and deploy the [ngrok Kubernetes Operator](https://github
     <Tip>
     	**If you see an error when applying the manifest, double-check that you've
     	updated the `NGROK_DOMAIN` value and re-apply.**
-    </Tip>
+</Tip>
 
 1.  Access your app, with ingress now handled by ngrok, by navigating to your ngrok domain, e.g. `https://one-two-three.ngrok.app`, in your browser.
 

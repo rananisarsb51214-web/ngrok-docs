@@ -5,7 +5,6 @@ sidebarTitle: CLI API Commands
 
 {/* This file is generated. Do not edit it directly. The templates can be edited in the ngrok-private repo */}
 
-
 With the ngrok agent CLI, you can use built-in commands to interact with the ngrok API.
 For more information about the ngrok API and interfacing with it directly, see [the ngrok api page](../api).
 
@@ -8035,17 +8034,17 @@ ngrok api tls-certificates create [flags]
 
 ### Flags
 
-| Flag                | Description                                                                                                                              |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Flag                | Description                                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--certificate-pem` | chain of PEM-encoded certificates, leaf first. See Certificate Bundles (https://ngrok.com/docs/universal-gateway/http#certificate-chains). |
-| `--description`     | human-readable description of this TLS certificate. optional, max 255 bytes.                                                             |
-| `--metadata`        | arbitrary user-defined machine-readable data of this TLS certificate. optional, max 4096 bytes.                                          |
+| `--description`     | human-readable description of this TLS certificate. optional, max 255 bytes.                                                               |
+| `--metadata`        | arbitrary user-defined machine-readable data of this TLS certificate. optional, max 4096 bytes.                                            |
 | `--private-key-pem` | private key for the TLS certificate, PEM-encoded. See Private Keys (https://ngrok.com/docs/universal-gateway/http#private-keys).           |
-| `--api-key`         | API key to use                                                                                                                           |
-| `--config`          | path to config files; they are merged if multiple                                                                                        |
-| `--log`             | path to log file, 'stdout', 'stderr' or 'false'                                                                                          |
-| `--log-format`      | log record format: 'term', 'logfmt', 'json'                                                                                              |
-| `--log-level`       | logging level: 'debug', 'info', 'warn', 'error', 'crit'                                                                                  |
+| `--api-key`         | API key to use                                                                                                                             |
+| `--config`          | path to config files; they are merged if multiple                                                                                          |
+| `--log`             | path to log file, 'stdout', 'stderr' or 'false'                                                                                            |
+| `--log-format`      | log record format: 'term', 'logfmt', 'json'                                                                                                |
+| `--log-level`       | logging level: 'debug', 'info', 'warn', 'error', 'crit'                                                                                    |
 
 ## ngrok api tls-certificates delete
 

@@ -4,8 +4,6 @@ sidebarTitle: Forwarding Traffic and Load Balancing
 description: How to use ngrok cloud endpoints to do round-robin load balancing.
 ---
 
-
-
 This guide provides an example of using an ngrok Cloud Endpoint to route traffic between multiple internal endpoints.
 
 ## Core Concepts
@@ -122,18 +120,18 @@ on_http_request:
 
 ```json policy.json
 {
-  "on_http_request": [
-    {
-      "actions": [
-        {
-          "type": "forward-internal",
-          "config": {
-            "url": "https://your-domain-name.internal"
-          }
-        }
-      ]
-    }
-  ]
+	"on_http_request": [
+		{
+			"actions": [
+				{
+					"type": "forward-internal",
+					"config": {
+						"url": "https://your-domain-name.internal"
+					}
+				}
+			]
+		}
+	]
 }
 ```
 

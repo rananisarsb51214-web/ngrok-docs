@@ -15,7 +15,7 @@ To use the ngrok Kubernetes Operator with Microsoft Entra ID:
 4. [Create an enterprise app in Microsoft Entra ID](#create-an-enterprise-app)
 5. [Finish adding Microsoft Entra ID authorization to your ngrok Edge](#finish-adding-entra-ID-authorization-ngrok-edge)
 6. [Test authorization to your app using Microsoft Entra ID](#test-authorization-using-microsoft-entra-id)
-</Tip>
+   </Tip>
 
 The [ngrok Kubernetes Operator](/k8s) is ngrok's official controller for adding secure public ingress and middleware execution to your Kubernetes apps with ngrok's cloud service. With ngrok, you can manage and secure traffic to your apps at every stage of the development lifecycle while also benefitting from simpler configurations, security, and edge acceleration.
 
@@ -29,7 +29,7 @@ Microsoft Azure Active Directory (AD)—now known as [Microsoft Entra ID](https:
 	nothing about the product or its capabilities. We have used **Microsoft Entra
 	ID** up to this point due to the recency of the change, but will use **Entra
 	ID** for the remainder.**
-   </Note>
+</Note>
 
 The ngrok Kubernetes Operator and Microsoft Entra ID integrate by letting you not only route public traffic to an app deployed on a Kubernetes cluster, but also restrict access only to users who you have authorized through Microsoft Entra ID.
 
@@ -41,7 +41,7 @@ With this guide, you'll (optionally) create a new Kubernetes cluster and example
 1. An [ngrok account](https://ngrok.com/signup) at the [**pay-as-you-go** or **custom**](https://ngrok.com/pricing) tiers.
 2. A Microsoft Azure account with access to an existing Microsoft Entra ID tenant or the ability to create a new tenant with an Microsoft Entra ID P1 or P2 license.
 3. A Kubernetes cluster, either locally or in a public cloud, with an app you'd like to be publicly accessible to specific users.
-</Warning>
+   </Warning>
 
 ## **Step 1**: Create a cluster and deploy an example app
 

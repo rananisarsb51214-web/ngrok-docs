@@ -83,7 +83,7 @@ helm install --values values.yaml consul hashicorp/consul --create-namespace --n
 	**Depending on your computer, this can take some time for the pods to become
 	healthy. You can watch the status of the pods with `kubectl get pods
 	--namespace consul -w`**
-   </Tip>
+</Tip>
 
 1. Verify Consul is installed and all its pods are healthy
 
@@ -101,7 +101,7 @@ We now have a Kubernetes cluster with a Consul service mesh installed.
 	**These steps are based on Consul's Tutorial [Consul Service Discovery and
 	Service Mesh on
 	Minikube](https://developer.hashicorp.com/consul/tutorials/kubernetes/kubernetes-minikube)**
-   </Note>
+</Note>
 
 ## Configure the ngrok Kubernetes Operator
 
@@ -263,7 +263,7 @@ spec:
 - The host is the ngrok domain name you selected that is static
 - There is a route for `/` that routes to the `frontend` service on port `3000`
 - There is a route for `/api` that routes to the `public-api` service on port `8080`
-</Tip>
+  </Tip>
 
 Open your `<NGROK_DOMAIN>` domain in your browser and see the HashiCups application!
 

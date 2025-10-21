@@ -3,6 +3,7 @@ title: Ingress to a microservices-based application connected via Linkerd's serv
 sidebarTitle: Linkerd
 description: Set up a local cluster to demonstrate how to use the ngrok Kubernetes Operator with Linkerd.
 ---
+
 The ngrok Kubernetes Operator is the official controller for adding secure public ingress and middleware execution to your Kubernetes applications with ngrok's cloud service. With ngrok, you can manage and secure traffic to your applications at every stage of the development lifecycle while also benefiting from simpler configurations, security, and edge acceleration.
 
 Linkerd is an open source [service mesh](https://linkerd.io/what-is-a-service-mesh/#), which is a set of network proxies that handle communications between microservices to add in observability, security, and reliability at the platform level, rather than the application level, of your cloud native infrastructure. For example, Linkerd enables mutual TLS (mTLS) between microservices, which ensures confidentiality (encryption) and authenticity (identity validation) on both sides of the connection. After you deploy Linkerd's control plane, you can then install extensions for additional functionality, like a dashboard for debugging errors, exploring workloads, and more.
@@ -30,7 +31,7 @@ Using this guide, you will launch a local cluster (or use an existing local/remo
     domain, like `https://api.example.com`.
   - We'll refer to this domain as `<NGROK_DOMAIN>`.
 
-## Set up a local development cluster 
+## Set up a local development cluster
 
 1. Create a local Kubernetes cluster with minikube. You will assign it a profile named `ngrok-linkerd` with `-p`, and for the best compatibility with Linkerd, you will use the `containerd` [container runtime](https://minikube.sigs.k8s.io/docs/runtimes/).
 
@@ -48,7 +49,7 @@ Using this guide, you will launch a local cluster (or use an existing local/remo
 
    If minikube defaults to using the `docker` runtime, you will likely see an error related to root privileges when installing Linkerd to your cluster. The error includes a workaround to let you install Linkerd despite using the `docker` runtime.
 
-   </Tip>
+</Tip>
 
 1. Use `kubectl` to verify your local cluster is running properly.
 
@@ -62,7 +63,7 @@ Using this guide, you will launch a local cluster (or use an existing local/remo
    kube-system       Active   72s
    ```
 
-## Deploy Linkerd's service mesh to your cluster 
+## Deploy Linkerd's service mesh to your cluster
 
 1. Verify your Linkerd CLI is working correctly with `linkerd version`, which should display the same output as below. The `Server version: unavailable` is expected at this point.
 
@@ -104,9 +105,9 @@ Using this guide, you will launch a local cluster (or use an existing local/remo
 
    These steps are based on the [Linkerd documentation](https://linkerd.io/2.14/getting-started/), which we encourage you to explore for additional details on the value of a service mesh, additional Linkerd features, and more.
 
-   </Note>
+</Note>
 
-## Deploy an example microservices-based application 
+## Deploy an example microservices-based application
 
 To demonstrate how Linkerd and the ngrok Kubernetes Operator integrate to add additional observability, security, and reliability into your cluster, you'll deploy the [Emojivoto](https://github.com/BuoyantIO/emojivoto) demo application, which was developed by Buoyant, the company that originally developed Linkerd.
 
@@ -145,7 +146,7 @@ To demonstrate how Linkerd and the ngrok Kubernetes Operator integrate to add ad
 
    Make sure you edit line `9` of the manifest below, which contains the `NGROK_DOMAIN` variable, with your ngrok subdomain. It should look something like `one-two-three.ngrok.app`.
 
-   </Tip>
+</Tip>
 
    ```yaml showLineNumbers
    apiVersion: networking.k8s.io/v1
@@ -180,13 +181,13 @@ To demonstrate how Linkerd and the ngrok Kubernetes Operator integrate to add ad
 
    If you see an error when applying the manifest, double-check that you've updated the `NGROK_DOMAIN` value and try again.
 
-   </Tip>
+</Tip>
 
 1. Access your Emojivoto application by navigating to the your ngrok domain, e.g. `https://one-two-three.ngrok.app`, in your browser.
 
    ![Viewing the Emojivoto application](../img/linkerd/img/emojivoto.png)
 
-## Add Linkerd's dashboard to verify meshing and mTLS 
+## Add Linkerd's dashboard to verify meshing and mTLS
 
 Given that one of the key benefits of a service mesh is increased observability, and the inherent security enhancements that come from mTLS connections between your microservices, you'll want to double-check that your deployments and pods are properly meshed.
 

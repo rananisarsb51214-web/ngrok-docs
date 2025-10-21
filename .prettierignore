@@ -33,3 +33,9 @@ docs/k8s/installation/*
 docs/k8s/guides/*
 docs/k8s/guides/how-to/*
 
+# Prettier has issues with nested JSX components in these MDX files
+integrations/endpoint-sso/*.mdx
+integrations/event-destinations/amazon-*.mdx
+integrations/webhooks/pagerduty-webhooks.mdx
+integrations/webhooks/shopify-webhooks.mdx
+
